@@ -12,6 +12,6 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User find(@NonNull String id) {
-        return new User(id, nameCreator.create());
+        return new User(id, nameCreator.create(), CurrentDate.get());
     }
 }
